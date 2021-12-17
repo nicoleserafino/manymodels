@@ -27,6 +27,8 @@ b.	Model Scoring: Using the Pandas Function API to run score multiple datasets a
 a.	Predictions: predictions are saved to SQL Synapse during the model scoring pipeline.
 b.	Metrics: PowerBI connects to the model predictions to retrieve and aggregate results for end user.
 
+[Read More about Many Models with Spark](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/ai/many-models-machine-learning-azure-spark)
+
 ## Option 2: [Implementing Many Models using Azure ML Parallel Run Step and Azure ML Pipeline](./code/aml_prs/prs_many_models.ipynb)
 
 Azure Parallel Run Step (PRS) is a powerful option to run any sort of ML Many Models training and inferencing. Given an input dataset (file or tabular), PRS can split data by number of files (for file dataset) or partition data by size or by a column value (tabular dataset) then apply your ML script which can be any ML algorithm on thousands of portions/partitions in parallel. Like other forms of AML training, you can specify your custom training environment with libraries dependencies or more advanced with custom docker environment for configurations beyond standard PyPi libraries and wide choices of CPU and GPUs machines.
@@ -34,6 +36,7 @@ Azure Parallel Run Step (PRS) is a powerful option to run any sort of ML Many Mo
 
 The Many Models accelerator provides detail guideline with file dataset. This requires data to be in the form of multiple files with each file to be the data for a model (e.g. store-brand transaction data). Data in your environment may come from a centralized source (e.g. a big dataset for all products, stores…) so you would need to prepare data into such file dataset format which may not be convenient.
 
+[Read More about Many Models in AML](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/ai/many-models-machine-learning-azure-machine-learning)
 
 ## When to use Synapse Spark/Databricks for Many Models
 •	When your Many Model training pipeline has complex data transformation & grouping requirements before data can be used for ML training, that Spark itself is a natural fit. Then it can be a good extension to write Many Model step using Spark Pandas Function API.
