@@ -49,4 +49,4 @@ The Many Models accelerator provides detail guideline with file dataset. This re
 -	Apart from the data preparation process, training can be very scalable in both Spark and PRS. You can train hundreds thousands of models in parallel.
 -	Both Spark and PRS spin up separate training processes in every machine in a cluster and you can spin up a process for each core in a machine. While this means very good utilization of resources, It is important to size the cluster and the right SKU especially if the training process is expensive and long running
 
-The two approaches share same [util file](./code/util/timeseries_utilities.py) which is copied from [Many Model Accelerator repo](https://github.com/microsoft/solution-accelerator-many-models/blob/master/Custom_Script/scripts/timeseries_utilities.py)
+The two approaches share same [util file](./code/util/timeseries_utilities.py) which is copied from [Many Model Accelerator repo](https://github.com/microsoft/solution-accelerator-many-models)
